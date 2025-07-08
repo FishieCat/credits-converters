@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea id="in" rows="10" cols="50"></textarea>
+<button onclick="go()">Convert</button>
+<pre id="out"></pre>
+<script>
+function go() {
+  const lines = document.getElementById("in").value.split(/,\s*/);
+  const map = {};
+  for (let line of lines) {
+    const m = line.match(/^(.*?)(?: by (.*))?$/);
+    if (!m) continue;
+    const name = m[1], author = m[2] || "";
+    map[author] = (map[author] || []).concat(name);
+  }
+  let out = "";
+  for (let [author, names] of Object.entries(map)) {
+    out += names.join(", ") + (author ? " by\n" + author : "") + "\n\n";
+  }
+  document.getElementById("out").textContent = out.trim();
+}
+</script>
+</body>
+</html>
