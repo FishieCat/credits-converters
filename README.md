@@ -14,3 +14,9 @@ Converts stuff like `a by x, b by x, c by beep, d by x, e by beep`
 `{[^\}]*}`
 
 Catches stuff like `{a=https://example.com/sample}{b}SampleFish: {/b}{/a}Project Directoresque`
+
+# Tools
+
+## [textcompare](https://fishiecat.github.io/textcompare/)
+
+Make diff screenshots of credits before/after via [GoFullPage](https://github.com/mrcoles/full-page-screen-capture-chrome-extension) while they haven't sold out yet.
