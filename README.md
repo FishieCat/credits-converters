@@ -6,3 +6,11 @@ Collection of onverters of credits formats, mostly for MobyGames
 Made for https://1320.itch.io/c
 
 Converts stuff like `a by x, b by x, c by beep, d by x, e by beep`
+
+# RegEx
+
+## Remove Ren'Py formatting from text
+
+`{[^\}]*}`
+
+Catches stuff like `{a=https://example.com/sample}{b}SampleFish: {/b}{/a}Project Directoresque`
